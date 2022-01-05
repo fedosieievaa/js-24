@@ -1,0 +1,166 @@
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        color: rgb(208, 208, 208);
+        background-color: rgba(146, 203, 247, 0.637);
+    }
+    
+    .container {
+        width: 30%;
+        margin: 50px auto 0 auto;
+        padding: 3%;
+        background: rgb(18, 18, 18);
+        border-radius: 5px;
+        box-shadow: 0 0 0 0.2rem rgba(50, 92, 170, 0.274);
+    }
+    
+    .logo {
+        width: 32px;
+        height: 32px;
+        margin: 50px auto 10px auto;
+        padding: 10px;
+        background: rgb(242, 144, 178);
+        border-radius: 50%;
+    }
+    
+    .title {
+        margin: 0 0 30px 0;
+        text-align: center;
+        font-weight: normal;
+        font-size: 26px;
+    }
+    
+    .form {
+        margin: 0 auto;
+    }
+    
+    .form_input {
+        width: 97%;
+        display: block;
+    }
+    
+    .form_input_sm {
+        width: 45%;
+    }
+    
+    .form_name {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .form_input,
+    .form_input_sm {
+        height: 50px;
+        margin: 0 0 20px 0;
+        padding: 0 0 0 10px;
+        background: transparent;
+        color: rgb(248, 207, 222);
+        border-style: none;
+        border-radius: 3px;
+        border: 1px solid grey;
+        font-size: 16px;
+        outline: none;
+        cursor: pointer;
+    }
+    
+    .checkbox_container {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+    
+    .form_check {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+    
+    .form_check+label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .form_check+label::before {
+        content: '';
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 2px solid #adb5bd;
+        border-radius: 3px;
+        margin-right: 5px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 70% 70%;
+    }
+    
+    .form_check:checked+label::before {
+        border-color: rgb(242, 144, 178);
+        background-color: #ffffff;
+        background-image: url("./assets/img/checkmark-16.png");
+    }
+    
+    .form_check:not(:disabled):not(:checked)+label:hover::before {
+        border-color: rgb(245, 181, 204);
+    }
+    
+    .form_check:focus+label::before {
+        box-shadow: 0 0 0 0.2rem rgba(222, 172, 235, 0.274);
+    }
+    
+    .form_check:focus:not(:checked)+label::before {
+        border-color: #e6b1f6;
+    }
+    
+    .btn__sign-in-up {
+        width: 100%;
+        height: 35px;
+        margin: 0 0 20px 0;
+        font-weight: bold;
+        background: rgb(146, 203, 247);
+        border-style: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    
+    .btn__sign-in-up:hover {
+        background: rgb(108, 189, 251);
+    }
+    
+    .btn__sign-in-up:active {
+        background: rgb(78, 146, 199);
+        color: #e6b1f6;
+    }
+    
+    .container_link {
+        text-decoration: none;
+        color: rgb(146, 203, 247);
+        font-size: 14px;
+    }
+    
+    .container_link:hover {
+        text-decoration: underline;
+    }
+    
+    .container_link-signin {
+        display: block;
+        text-align: end;
+    }
+    
+    .container_link-signup {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .container_link-signin,
+    .container_link-signup {
+        margin-bottom: 50px;
+    }
+    
+    .copyright {
+        text-align: center;
+        font-size: 14px;
+        color: rgb(220, 220, 220);
+    }
