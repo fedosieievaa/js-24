@@ -9,12 +9,25 @@ export const SignUp = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+    const nameValidator  = /^[A-Za-z]{3,}$/;
+    const mailValidator = /^[.\S]{3,}@[A-Za-z]{2,}\.[A-Za-z]{2,}/;
+    const passwordValidator = /(?=.*[a-z])(?=.*[A-Z])\S{8,}/;
+
     const getUser = (e) => {
         e.preventDefault();
-        localStorage.setItem("name", name);
-        localStorage.setItem("lastname", lastname);
-        localStorage.setItem("email", email);
-        localStorage.setItem("password", password);
+        if(name.match(nameValidator) && lastname.match(nameValidator) && email.match(mailValidator) && password.match(passwordValidator)){
+            localStorage.setItem("name", name);
+            localStorage.setItem("lastname", lastname);
+            localStorage.setItem("email", email);
+            localStorage.setItem("password", password);
+        } else{
+            alert(`
+            Name and lastname must be at least 3 characters long.
+            The password must be at least 8 characters, uppercase
+            and lowercase.
+            Email must contain minimum 3 characters, @, minimum 
+            2 characters, period and minimum 2 characters.`);
+        }
         setName("");
         setLastname("");
         setEmail("");
