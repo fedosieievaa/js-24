@@ -26,7 +26,10 @@ export const SignIn = () => {
         }
 
     }
-    const func =() => {
+
+    //TODO: think up how to fix bug =>
+
+    const func = () => {
         setUserEmail(localStorage.getItem("userEmail"));
         setUserPassword(localStorage.getItem("userPassword"));
     }
