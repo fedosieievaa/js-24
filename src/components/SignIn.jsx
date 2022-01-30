@@ -27,14 +27,12 @@ export const SignIn = () => {
 
     }
 
-    //TODO: think up how to fix bug =>
-
-    const func = () => {
+    const saveData = () => {
         setUserEmail(localStorage.getItem("userEmail"));
         setUserPassword(localStorage.getItem("userPassword"));
     }
 
-    useEffect(()=>func(),[])
+    useEffect(()=>saveData(),[])
 
     return(
         <div className="container">
